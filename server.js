@@ -40,7 +40,7 @@ function createTemplate(data){
             <!doctype html>
         <head>
             <title>
-                Article one | Anajli Pai
+              ${title}
             </title>
             <meta name="viewport" content="width-device-width, initial-scale-1" />
             <link href="/ui/style.css" rel="stylesheet" />
@@ -55,31 +55,14 @@ function createTemplate(data){
             </div>
             <hr/>
             <h3>
-                Article one
+             ${heading}
             </h3>
         
             <div>
-            sept 23,2016
+            ${date}
             </div>
             <div>
-              <p>
-               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
-               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
-               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-              </p>
-              <p>
-               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
-               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
-               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-              </p>
-              <p>
-               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
-               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
-               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-              </p>
+            ${content}
             </div>
             </div>
         
@@ -87,6 +70,7 @@ function createTemplate(data){
         </body>
         </html>
 `;
+return htmlTemplate;
 }
 
 
