@@ -5,29 +5,82 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articelOne = {
-    title:'Article one|Anjali Pai',
-    heading:'Article One',
-    date:'Sept 5, 2016',
-    content: `<p>
-       This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
-       content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-       This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
-       content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-      </p>
-      <p>
-       This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
-       content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-       This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
-       content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-      </p>
-      <p>
-       This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
-       content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-       This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
-       content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-      </p>`
-    
+var articles;{
+        
+         'article-one';{
+            title:'Article one|Anjali Pai',
+            heading:'Article One',
+            date:'Sept 5, 2016',
+            content: `
+              <p>
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+              </p>
+              <p>
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+              </p>
+              <p>
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+              </p>`
+            
+        },
+         'article-two'; {
+             title:'Article two|Anjali Pai',
+            heading:'Article two',
+            date:'Sept 5, 2016',
+            content: `
+               <p>
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+              </p>
+              <p>
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+              </p>
+              <p>
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+              </p>`
+             
+         },
+         'article-three'; {
+             title:'Article three|Anjali Pai',
+            heading:'Article three',
+            date:'Sept 5, 2016',
+            content: `<p>
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+              </p>
+              <p>
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+              </p>
+              <p>
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+               This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is
+               content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+              </p>`
+             
+         }
 };
 
 function createTemplate(data){
@@ -77,14 +130,11 @@ return htmlTemplate;
 
 
 
-app.get('/article-one', function (req, res) {
- res.send(createTemplate(articleOne))
-});
-app.get('/article-two', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-app.get('/article-three', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+app.get('/;articleName', function (req, res) {
+    //articleName == article-one
+    //articles[articleName] == {} content from article one
+    var articleName = req.params.articleName;
+ res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/', function (req, res) {
